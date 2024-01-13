@@ -1,4 +1,4 @@
-class Post < ApplicationRecord # rubocop:disable Layout/EndOfLine
+class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :comments, foreign_key: :postid
   has_many :likes, foreign_key: :postid

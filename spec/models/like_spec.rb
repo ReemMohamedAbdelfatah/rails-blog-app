@@ -1,5 +1,4 @@
-require 'rails_helper' # rubocop:disable Layout/EndOfLine
-
+require 'rails_helper'
 RSpec.describe Like, type: :model do
   let(:user) { User.create(name: 'Reem Muhammed') }
   let(:post) { Post.create(author: user, title: 'My Post', text: 'This is my post content.') }

@@ -1,4 +1,4 @@
-require 'test_helper' # rubocop:disable Layout/EndOfLine
+require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
   # test "the truth" do
