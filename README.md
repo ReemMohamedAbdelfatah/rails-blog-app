@@ -60,15 +60,6 @@
 - **[Display comments on posts]**
 - **[Display likes on posts]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-Coming Soon ...
-
-- [Live Demo Link](https://)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,6 +153,6 @@ I would like to thank All Microverse team and students
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
