@@ -1,4 +1,4 @@
-require "test_helper"
+require 'test_helper' # rubocop:disable Layout/EndOfLine
 
 class LikeTest < ActiveSupport::TestCase
   # test "the truth" do

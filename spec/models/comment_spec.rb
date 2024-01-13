@@ -1,4 +1,4 @@
-require 'rails_helper' # rubocop:disable Layout/EndOfLine
+require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   it 'is valid with valid attributes' do
