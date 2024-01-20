@@ -28,7 +28,7 @@
       </div>
   </div>
 
- <% @posts.each_with_index do |post, index|%>
+ <% @user.recent_posts.each_with_index do |post, index|%>
   <div class="card mt-2">
     <div class="card-body">
       <h5 class="card-title"> <%= post.title %> </h5>
