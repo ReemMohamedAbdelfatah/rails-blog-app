@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User'
-  has_many :comments, foreign_key: :postid
-  has_many :likes, foreign_key: :postid
+  belongs_to :author, foreign_key: :author_id, class_name: 'User'
+  has_many :comments, foreign_key: :postid_id
+  has_many :likes, foreign_key: :postid_id
 
   attribute :title, :text
   attribute :text, :text
