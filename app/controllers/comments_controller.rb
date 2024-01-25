@@ -3,13 +3,12 @@ class CommentsController < ApplicationController
 
   def new
     @user = current_user
-    @post = Post.find(params[:postid_id])
+    @post = Post.find(params[:post_id])
     @comment = Comment.new
   end
 
   def create
-    @comment = @post.comments.new(comment_params.merge(author: @user))
-
+    @comment = @post.comments.new(comment_params.merge(user: @user))
     if @comment.save
       redirect_to user_post_path(@user, @post), notice: 'Comment added successfully'
     else
@@ -21,7 +20,7 @@ class CommentsController < ApplicationController
 
   def find_user_and_post
     @user = current_user
-    @post = Post.find(params[:postid_id])
+    @post = Post.find(params[:post_id])
   end
 
   def comment_params
