@@ -42,7 +42,7 @@
     <div class="card mt-1 p-2 text-light bg-secondary">
       <div class="comments">
         <% post.recent_comments.each_with_index do |comment, index|%>
-            <p>Comment <%=index+1%>: <%= comment.author.name%>,  <%= comment.text%> </p>
+            <p>Comment <%=index+1%>: <%= comment.user.name%>,  <%= comment.text%> </p>
         <% end %>
     </div>
     </div>
