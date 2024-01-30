@@ -111,6 +111,12 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/ReemMoh67016126)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reemmuhammad)
 
+👤 **Collins Akorda**
+
+- GitHub: [@firstpj](https://github.com/firstpj)
+- Twitter: [@AkordaC](https://twitter.com/AkordaC)
+- LinkedIn: [Collins Akorda](https://www.linkedin.com/in/collins-akorda-bb46b2232/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
