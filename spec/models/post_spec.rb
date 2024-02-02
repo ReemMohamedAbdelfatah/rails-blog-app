@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   it 'is valid with valid attributes' do
-    user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.')
+    @user = User.create(name: 'Abdu', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.', posts_counter: 0)   
+    @post = Post.create(user: @user, title: 'Harru', text: 'text', comments_counter: 0, likes_counter: 0)
+   # post = Post.new(author: @user, title: 'My Post', text: 'This is my post content.')
     expect(post).to be_valid
   end
 
@@ -24,8 +25,8 @@ RSpec.describe Post, type: :model do
   end
 
   it 'is valid with a zero comments_counter' do
-    user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.', comments_counter: 0)
+    @user = User.create(name: 'John Doe')
+    post = Post.new(author: @user, title: 'My Post', text: 'This is my post content.', comments_counter: 0)
     expect(post).to be_valid
   end
 
@@ -37,25 +38,25 @@ RSpec.describe Post, type: :model do
 
   it 'is not valid with a negative comments_counter' do
     user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.', comments_counter: -1)
+    post = Post.new(user: user, title: 'My Post', text: 'This is my post content.', comments_counter: -1)
     expect(post).not_to be_valid
   end
 
   it 'is valid with a zero likes_counter' do
     user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.', likes_counter: 0)
+    post = Post.new(user: user, title: 'My Post', text: 'This is my post content.', likes_counter: 0)
     expect(post).to be_valid
   end
 
   it 'is valid with a positive likes_counter' do
     user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.', likes_counter: 5)
+    post = Post.new(user: user, title: 'My Post', text: 'This is my post content.', likes_counter: 5)
     expect(post).to be_valid
   end
 
   it 'is not valid with a negative likes_counter' do
     user = User.create(name: 'John Doe')
-    post = Post.new(author: user, title: 'My Post', text: 'This is my post content.', likes_counter: -1)
+    post = Post.new(user: user, title: 'My Post', text: 'This is my post content.', likes_counter: -1)
     expect(post).not_to be_valid
   end
 end
