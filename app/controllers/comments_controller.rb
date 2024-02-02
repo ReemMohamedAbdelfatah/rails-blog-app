@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @post.comments.new(comment_params.merge(user: @user))
+
     if @comment.save
       redirect_to user_post_path(@user, @post), notice: 'Comment added successfully'
     else

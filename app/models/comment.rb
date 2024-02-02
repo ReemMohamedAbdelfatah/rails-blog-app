@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
-  belongs_to :user, class_name: 'User', foreign_key: 'userid_id'
-  belongs_to :post, class_name: 'Post', foreign_key: 'postid_id'
+  belongs_to :user, class_name: 'User'
+  belongs_to :post
 
   attribute :text, :text
 

@@ -4,7 +4,7 @@ RSpec.describe Comment, type: :model do
   it 'is valid with valid attributes' do
     user = User.create(name: 'John Doe')
     post = Post.create(author: user, title: 'My Post', text: 'This is my post content.')
-    comment = Comment.new(user:, post:, text: 'Great post!')
+    comment = Comment.new(user_id: user.id, post_id: post.id, text: 'Great post!')
     expect(comment).to be_valid
   end
 

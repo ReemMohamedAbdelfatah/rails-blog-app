@@ -29,10 +29,10 @@ RSpec.describe User, type: :model do
 
   it 'returns the 3 most recent posts' do
     user = User.create(name: 'John Doe')
-    post1 = Post.create(author: user, title: 'Post 1', text: 'Text 1')
-    post2 = Post.create(author: user, title: 'Post 2', text: 'Text 2')
-    post3 = Post.create(author: user, title: 'Post 3', text: 'Text 3')
-    post4 = Post.create(author: user, title: 'Post 4', text: 'Text 4')
+    post1 = Post.create(user: user, title: 'Post 1', text: 'Text 1')
+    post2 = Post.create(user: user, title: 'Post 2', text: 'Text 2')
+    post3 = Post.create(user: user, title: 'Post 3', text: 'Text 3')
+    post4 = Post.create(user: user, title: 'Post 4', text: 'Text 4')
 
     recent_posts = user.recent_posts
 

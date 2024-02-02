@@ -14,7 +14,7 @@ RSpec.describe Like, type: :model do
   it 'is valid with valid attributes' do
     user = User.create(name: 'Reem Muhammed')
     post = Post.create(author: user, title: 'My Post', text: 'This is my post content.')
-    like = Like.new(user:, post:)
+    like = Like.new(user: user, post: post)
     expect(like).to be_valid
   end
 end

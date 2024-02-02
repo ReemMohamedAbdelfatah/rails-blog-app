@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
   helper_method :current_user
+
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(comments: :user)
+    @posts = @user.posts.includes(comments: :user).paginate(page: params[:page], per_page: 10)
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @post = @user.posts.includes(comments: :user).find(params[:id])
+    @post = Post.includes(comments: :user).find(params[:id])
+    @user = current_user
     @new_like = Like.new
   end
 
@@ -17,8 +18,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
     @post = current_user.posts.new(post_params)
+    @user = User.find(params[:user_id])
 
     if @post.save
       redirect_to user_post_path(@user, @post), notice: 'Post successfully created'

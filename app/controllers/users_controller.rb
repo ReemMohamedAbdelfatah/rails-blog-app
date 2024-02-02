@@ -3,11 +3,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
-    @user = User.find(params[:id])
-    @posts = @user.posts
-  end
-
   def new
     @user = User.new
   end
@@ -20,6 +15,11 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.recent_posts
   end
 
   private
