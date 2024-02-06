@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Post Index View Page', type: :system do
+RSpec.describe 'Post Index View Page', type: :feature do
   let!(:user1) do
     User.create(
       name: 'Test User 1',

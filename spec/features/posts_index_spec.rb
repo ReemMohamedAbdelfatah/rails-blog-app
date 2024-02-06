@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'posts index', type: :system do
+RSpec.describe 'posts index', type: :feature do
   let!(:user1) do
     User.create(
       name: 'test user1',
@@ -23,13 +23,13 @@ RSpec.describe 'posts index', type: :system do
   let!(:comment2) do
     Comment.create(post: post1, user: user1, text: 'nice!')
   end
-  let!(:comment2) do
+  let!(:comment3) do
     Comment.create(post: post1, user: user1, text: 'nice!')
   end
-  let!(:comment2) do
+  let!(:comment4) do
     Comment.create(post: post1, user: user1, text: 'nice!')
   end
-  let!(:comment2) do
+  let!(:comment5) do
     Comment.create(post: post1, user: user1, text: 'nice!')
   end
 
@@ -49,10 +49,19 @@ RSpec.describe 'posts index', type: :system do
       expect(page).to have_content("Number of posts: #{user1.posts_counter}")
     end
 
-    it 'displays a post\'s title and text' do
+    it 'displays a post1 title' do
       expect(page).to have_content(post1.title)
+    end
+
+    it 'displays a post1 text' do
       expect(page).to have_content(post1.text)
+    end
+
+    it 'displays a post2 title' do
       expect(page).to have_content(post2.title)
+    end
+
+    it 'displays a post2 text' do
       expect(page).to have_content(post2.text)
     end
 
