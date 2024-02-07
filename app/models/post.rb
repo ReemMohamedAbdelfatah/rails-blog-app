@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
-  belongs_to :author, foreign_key: :author_id, class_name: 'User'
-  has_many :comments, foreign_key: :postid_id
-  has_many :likes, foreign_key: :postid_id
+  belongs_to :author, class_name: 'User'
+  has_many :comments
+  has_many :likes
 
   attribute :title, :text
   attribute :text, :text
@@ -21,7 +21,6 @@ class Post < ApplicationRecord
   private
 
   def increment_author_posts_counter
-    puts 'Callback invoked!'
     author.increment!(:posts_counter)
   end
 end
