@@ -10,7 +10,7 @@ RSpec.describe 'Post Index View Page', type: :feature do
     )
   end
 
-let!(:post1) do
+  let!(:post1) do
     Post.create(author: user1, title: 'Post 1', text: 'Post 1 content', comments_counter: 1, likes_counter: 0)
   end
 
@@ -98,6 +98,4 @@ let!(:post1) do
       expect(page).to have_content('Likes: 1')
     end
   end
-
-
 end
